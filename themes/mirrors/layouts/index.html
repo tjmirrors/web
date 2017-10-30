@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="columns">
+  <div class="column is-three-quarters">
+    <div class="content">
+    </div>
+  </div>
+  <div class="column">
+    {{ partial "recent-notice.html" . }}
+    <hr/>
+    {{ partial "contact.html" . }}
+  </div>
+</div>
+{{ end }}

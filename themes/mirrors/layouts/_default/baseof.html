@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    {{ block "title" . }}
+      {{ if .IsPage }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}
+    {{ end }}
+  </title>
+  <link href='{{ "css/bulma.css" | absURL }}' rel='stylesheet' type="text/css" />
+</head>
+<body>
+  {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+  <section class="section">
+    <div class="container">
+      {{ block "main" . }}{{ end }}
+    </div>
+  </section>
+  {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
+  {{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
+</body>
+</html>

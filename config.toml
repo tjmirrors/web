@@ -1,0 +1,33 @@
+baseURL = "https://mirrors.tongji.edu.cn/public/"
+languageCode = "zh-CN"
+title = "同济大学开源镜像"
+theme = "mirrors"
+
+[[menu.main]]
+  name = "首页"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "通知"
+  weight = 30
+  identifier = "notice"
+  url = "/notice/"
+[[menu.main]]
+  name = "帮助"
+  weight = 40
+  identifier = "help"
+  url = "/help/"
+
+[params]
+  [[params.contacts]]
+    name = "Github"
+    url = "https://github.com/tongjimirrors"
+  [[params.footers]]
+    name = "鸣谢"
+    [[params.footers.items]]
+    name = "同济大学软件学院"
+    url = "http://sse.tongji.edu.cn/"
+    [[params.footers.items]]
+    name = "同济大学信息办"
+    url = "http://nic.tongji.edu.cn/"

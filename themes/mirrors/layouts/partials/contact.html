@@ -1,0 +1,8 @@
+<aside class="menu">
+  <p class="menu-label is-size-5">联系我们</p>
+  <ul class="menu-list">
+    {{ range .Site.Params.contacts }}
+    <li><a href="{{ .url }}">{{ .name }}</a></li>
+    {{ end }}
+  </ul>
+</aside>

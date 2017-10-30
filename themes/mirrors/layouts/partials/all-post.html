@@ -1,0 +1,11 @@
+<aside class="menu">
+  <p class="menu-label is-size-5">所有{{ .CurrentSection.Title }}</p>
+  <ul class="menu-list">
+    {{ $section := where (where $.Site.Pages.ByTitle ".Kind" "page") ".Section" .Section }}
+    {{ range $section }}
+    <li>
+      <a href="{{ .URL }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</aside>

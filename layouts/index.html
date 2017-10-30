@@ -1,0 +1,60 @@
+{{ define "main" }}
+<div class="columns">
+  <div class="column is-three-quarters">
+    <div id="list" class="content">
+      <p>欢迎访问同济大学开源软件镜像站。您可以点击下列表格中的软件名称访问其镜像，或点击“帮助”获取配置该软件镜像的详细说明。</p>
+      <div v-if="loading" class="has-text-centered">
+        <a class="button is-primary is-loading">Loading</a>
+      </div>
+      <table v-if="!loading" class="table is-striped is-fullwidth">
+        <thead>
+        <tr>
+          <th>名称</th>
+          <th>帮助</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="item in list">
+          <td><a v-bind:href="item.url"><% item.name %></a></td>
+          <td><a v-if="item.help" v-bind:href="item.help">帮助文档</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="column">
+    {{ partial "recent-notice.html" . }}
+    <hr/>
+    {{ partial "contact.html" . }}
+  </div>
+</div>
+{{ end }}
+{{ define "scripts" }}
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+<script src='{{ "js/vue.min.js" | relURL }}'></script>
+<script src='{{ "js/promise.min.js" | relURL }}'></script>
+<script src='{{ "js/fetch.min.js" | relURL }}'></script>
+{{ else }}
+<script src='{{ "js/vue.js" | relURL }}'></script>
+<script src='{{ "js/promise.js" | relURL }}'></script>
+<script src='{{ "js/fetch.js" | relURL }}'></script>
+{{ end }}
+<script>
+  var app = new Vue({
+    delimiters: ['<%', '%>'],
+    el: '#list',
+    data: {
+      loading: true,
+      list: []
+    },
+    created: function () {
+      fetch('/public/meta/list.json').then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        this.list = data;
+        this.loading = false;
+      }.bind(this))
+    }
+  });
+</script>
+{{ end }}

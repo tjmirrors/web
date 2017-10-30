@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="columns">
+  <div class="column is-2">
+    {{ partial "all-post.html" . }}
+  </div>
+  <div class="column is-10">
+    <section>
+      {{ range .Paginator.Pages }}
+      <div class="box">
+        <article class="media">
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <a href="{{ .URL }}"><strong>{{ .Title }}</strong></a>
+                <time class="tag">{{ .Date.Format "2006-01-02" }}</time>
+                <br/>
+                {{ .Content }}
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+      {{ end }}
+    </section>
+    <hr/>
+    {{ partial "pagination.html" . }}
+  </div>
+</div>
+{{ end }}

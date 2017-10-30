@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="columns">
+  <div class="column is-2">
+    {{ partial "all-post.html" . }}
+  </div>
+  <div class="column is-10">
+    <article class="content">
+      <h1>{{ .Title }}</h1>
+      <p>
+        <a href="{{ .CurrentSection.URL }}" class="tag is-primary">{{ .CurrentSection.Title }}</a>
+        <time class="tag is-info">{{ .Date.Format "2006-01-02" }}</time>
+      </p>
+      <div>
+        {{ .Content }}
+      </div>
+    </article>
+    <hr/>
+    {{ partial "pagination-single.html" . }}
+  </div>
+</div>
+{{ end }}

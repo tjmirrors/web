@@ -1,0 +1,12 @@
+<nav class="pagination" role="navigation" aria-label="pagination">
+  {{ if .Prev }}
+  <a href="{{ .Prev.URL }}" class="pagination-previous">上一篇</a>
+  {{ else }}
+  <a class="pagination-previous" disabled="">上一篇</a>
+  {{ end }}
+  {{ if .Next}}
+  <a href="{{ .Next.URL }}" class="pagination-next">下一篇</a>
+  {{ else }}
+  <a class="pagination-next" disabled="">下一篇</a>
+  {{ end }}
+</nav>

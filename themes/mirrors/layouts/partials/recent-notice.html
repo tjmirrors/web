@@ -1,0 +1,14 @@
+<aside class="menu">
+  <p class="menu-label is-size-5">近期通知</p>
+  <ul class="menu-list">
+    {{ $notices := where (where $.Site.Pages ".Kind" "page") ".Section" "notice"}}
+    {{ range first 5 $notices }}
+    <li>
+      <a href="{{ .URL }}">
+        {{ .Title }}<br/>
+        <time class="is-size-7">{{ .Date.Format "2006-01-02" }}</time>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</aside>

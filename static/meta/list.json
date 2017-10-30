@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Apache",
+    "url": "/apache-dist/",
+    "help": ""
+  },
+  {
+    "name": "CentOS",
+    "url": "/centos/",
+    "help": "/public/help/centos/"
+  },
+  {
+    "name": "Ubuntu",
+    "url": "/ubuntu/",
+    "help": "/public/help/ubuntu/"
+  },
+  {
+    "name": "Homebrew",
+    "url": "/git/Homebrew/",
+    "help": "/public/help/homebrew-spec/"
+  },
+  {
+    "name": "Homebrew Bottles",
+    "url": "homebrew-bottles",
+    "help": "/public/help/homebrew-bottles/"
+  },
+  {
+    "name": "IUS",
+    "url": "/ius/",
+    "help": ""
+  },
+  {
+    "name": "EPEL",
+    "url": "/epel/",
+    "help": ""
+  }
+]

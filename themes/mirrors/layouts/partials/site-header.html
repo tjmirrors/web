@@ -1,0 +1,25 @@
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ .Site.Title }}
+      </h1>
+      <h2 class="subtitle">
+        Welcome to Tongji Open Source Software Mirror
+      </h2>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <nav class="tabs is-boxed">
+      <div class="container">
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li {{ if eq .URL $.URL }}class="is-active"{{ end }}>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
