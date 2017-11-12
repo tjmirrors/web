@@ -1,37 +1,68 @@
 [
   {
     "name": "Apache",
-    "url": "/apache-dist/",
+    "url": "/apache/",
+    "type": "mirror",
     "help": ""
   },
   {
     "name": "CentOS",
     "url": "/centos/",
+    "type": "mirror",
     "help": "/public/help/centos/"
   },
   {
     "name": "Ubuntu",
     "url": "/ubuntu/",
+    "type": "mirror",
     "help": "/public/help/ubuntu/"
   },
   {
     "name": "Homebrew",
     "url": "/git/Homebrew/",
+    "type": "mirror",
     "help": "/public/help/homebrew-spec/"
   },
   {
     "name": "Homebrew Bottles",
     "url": "/homebrew-bottles/",
+    "type": "mirror",
     "help": "/public/help/homebrew-bottles/"
   },
   {
     "name": "IUS",
     "url": "/ius/",
+    "type": "mirror",
     "help": ""
   },
   {
     "name": "EPEL",
     "url": "/epel/",
+    "type": "mirror",
     "help": ""
+  },
+  {
+    "name": "Maven",
+    "url": "",
+    "type": "cache",
+    "help": "/public/help/maven"
+  },
+  {
+    "name": "NPM",
+    "url": "",
+    "type": "cache",
+    "help": "/public/help/npm"
+  },
+  {
+    "name": "PyPI",
+    "url": "",
+    "type": "cache",
+    "help": "/public/help/pypi"
+  },
+  {
+    "name": "RubyGems",
+    "url": "",
+    "type": "cache",
+    "help": "/public/help/rubygems"
   }
 ]

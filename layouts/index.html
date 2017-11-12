@@ -10,12 +10,17 @@
         <thead>
         <tr>
           <th>名称</th>
+          <th>类型</th>
           <th>帮助</th>
         </tr>
         </thead>
         <tbody>
         <tr v-for="item in list">
-          <td><a v-bind:href="item.url"><% item.name %></a></td>
+          <td>
+            <a v-if="item.url" v-bind:href="item.url"><% item.name %></a>
+            <span v-else><% item.name %></span>
+          </td>
+          <td><% item.type | localType %></td>
           <td><a v-if="item.help" v-bind:href="item.help">帮助文档</a></td>
         </tr>
         </tbody>
@@ -54,6 +59,18 @@
         this.list = data;
         this.loading = false;
       }.bind(this))
+    },
+    filters:  {
+      localType: function (value) {
+        switch (value) {
+          case "mirror":
+            return "镜像";
+          case "cache":
+            return "缓存";
+          default:
+            return "";
+        }
+      }
     }
   });
 </script>
