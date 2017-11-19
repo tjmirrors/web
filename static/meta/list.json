@@ -42,27 +42,27 @@
     "help": ""
   },
   {
-    "name": "Maven",
+    "name": "Maven Central",
     "url": "",
     "type": "cache",
-    "help": "/public/help/maven"
+    "help": "/public/help/maven-central/"
   },
   {
     "name": "NPM",
     "url": "",
     "type": "cache",
-    "help": "/public/help/npm"
+    "help": "/public/help/npm/"
   },
   {
     "name": "PyPI",
     "url": "",
     "type": "cache",
-    "help": "/public/help/pypi"
+    "help": "/public/help/pypi/"
   },
   {
     "name": "RubyGems",
     "url": "",
     "type": "cache",
-    "help": "/public/help/rubygems"
+    "help": "/public/help/rubygems/"
   }
 ]

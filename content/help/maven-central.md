@@ -1,11 +1,11 @@
 ---
-title: "Maven"
+title: "Maven Central"
 date: 2017-11-12T20:31:49+08:00
 ---
 
 ## 上游仓库
 
-[https://repo1.maven.org/maven2/](https://repo1.maven.org/maven2/)
+[https://repo.maven.apache.org/maven2/](https://repo.maven.apache.org/maven2/)
 
 ## 使用方法
 
@@ -17,8 +17,8 @@ date: 2017-11-12T20:31:49+08:00
   <mirrors>
     <mirror>
       <id>Tongji</id>
-      <name>Tongji Central Cache</name>
-      <url>https://mirrors.tongji.edu.cn/nexus/repository/maven/</url>
+      <name>Tongji Maven Central Cache</name>
+      <url>https://mirrors.tongji.edu.cn/nexus/repository/maven-central/</url>
       <mirrorOf>central</mirrorOf>
     </mirror>
   </mirrors>
