@@ -9,11 +9,15 @@ date: 2017-11-12T20:31:49+08:00
 
 ## 使用方法
 
-修改配置文件`${user.home}/.m2/settings.xml`，增加`mirror`配置
+在用户目录下的`.m2`文件夹中创建`settings.xml`配置文件。具体配置文件路径如下：
+
+- Windows：`%HOMEPATH%\.m2\settings.xml`
+- Linux或macOS：`$HOME/.m2/settings.xml`
+
+在`settings.xml`中增加`mirror`配置，示例配置如下：
 
 ```
 <settings>
-  ...
   <mirrors>
     <mirror>
       <id>Tongji</id>
@@ -22,7 +26,6 @@ date: 2017-11-12T20:31:49+08:00
       <mirrorOf>central</mirrorOf>
     </mirror>
   </mirrors>
-  ...
 </settings>
 ```
 
