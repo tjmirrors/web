@@ -18,6 +18,12 @@
     "help": "/public/help/ubuntu/"
   },
   {
+    "name": "Kali Linux",
+    "url": "/kali/",
+    "type": "mirror",
+    "help": "/public/help/kali/"
+  },
+  {
     "name": "Homebrew",
     "url": "/git/Homebrew/",
     "type": "mirror",
