@@ -6,6 +6,12 @@
     "help": ""
   },
   {
+    "name": "CRAN",
+    "url": "/CRAN/",
+    "type": "mirror",
+    "help": "/public/help/cran/"
+  },
+  {
     "name": "CentOS",
     "url": "/centos/",
     "type": "mirror",
