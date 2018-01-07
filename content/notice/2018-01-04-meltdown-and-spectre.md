@@ -31,6 +31,7 @@ date: 2018-01-04T23:00:00+08:00
 
 ---
 
+- AMD: [An Update on AMD Processor Security](https://www.amd.com/en/corporate/speculative-execution)
 - ARM: [Vulnerability of Speculative Processors to Cache Timing Side-Channel Mechanism](https://developer.arm.com/support/security-update), [Cache Speculation Side-channels whitepaper](https://developer.arm.com/support/security-update/download-the-whitepaper)
 - Intel: [Speculative Execution and Indirect Branch Prediction Side Channel Analysis Method](https://security-center.intel.com/advisory.aspx?intelid=INTEL-SA-00088&languageid=en-fr), [Speculative Execution Branch Prediction Side Channel and Branch Prediction Analysis Method](https://01.org/security/advisories/intel-oss-10002), [Speculative Execution Data Cache and Indirect Branch Prediction Method Side Channel Analysis](https://01.org/security/advisories/intel-oss-10003)
 - NVIDIA: [Security Notice: Speculative Side Channels](http://nvidia.custhelp.com/app/answers/detail/a_id/4609)
